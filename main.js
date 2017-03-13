@@ -207,9 +207,30 @@ console.assert(isVowel('e'), true);
 // "o" in between. For example, translate("this is fun") should return the
 // string "tothohisos isos fofunon".
 // write your code here:
-
+function translate(text){
+  for (var i = text; i = text.length; text++){
+  if (i = 'a'){
+    return (i)
+  }
+  if (i = 'e'){
+    return (i)
+  }
+  if (i = 'i'){
+    return (i)
+  }
+  if (i = 'o'){
+    return (i)
+  }
+  if (i = 'u'){
+    return (i)
+  }
+  else {
+    return (i+i+'o')
+  }
+}
+}
 // write your console.log/asserts here:
-
+console.log(translate('my lucky stars'));
 
 // ---------------------
 // Write a function called `reverse` that computes the reversal of a string.
