@@ -54,13 +54,12 @@ function sum(num, num2) {
     return num + num2;
 }
 
-console.log(sum);
 
 // write your console.log/asserts here:
 // i've already written some console.logs and console.asserts for you.
 // follow this pattern as you work on the rest of these problems.
 console.log('sum of 2 and 3 is ', sum(2, 3));
-console.assert(sum(2, 3), 5);
+console.assert(sum(2, 3)=== 5, '2 plus 3 should equal 5');
 console.assert(sum(1, 0), 1);
 console.assert(sum(-48, 5), 43);
 
@@ -324,16 +323,17 @@ console.log(getOdds(numbers));
 // returns a new array with only the strings which contain the substring `is`
 // write your code here:
 function containIs(array){
-  var sub = '';
   var substring = [];
-  for(var i = 0; i < array.length; i++){
-  if (array[i] = 'is') {
-    array[i] = (sub += array[i]);
-  substring.push(sub += array[i]);
-  return(substring);
-      }
+  for(var i = 0; i < array.length; i++)
+  {
+    if (array[i].includes('is'))
+    {
+      substring.push(array[i]);
+
     }
-  };
+  }
+  return(substring);
+};
 
 
 // write your console.log/asserts here:
