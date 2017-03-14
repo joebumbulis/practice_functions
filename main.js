@@ -74,7 +74,6 @@ function avg(num1, num2, num3) {
 // write your console.log/asserts here:
 console.log(avg(40, 20, 60));
 console.assert(avg(50, 40, 90), 60);
-console.assert(avg(50, 'dog', 100), 40);
 
 // -------------------
 // Write a function called `getLength` that takes one parameter (a string) and
@@ -196,10 +195,10 @@ function isVowel(v){
   }
 }
 // write your console.log/asserts here:
-console.log(isVowel('o'));
-console.assert(isVowel('u'), true);
-console.assert(isVowel('a'), true);
-console.assert(isVowel('e'), true);
+console.log(isVowel(0));
+console.assert(isVowel('u') === true);
+console.assert(isVowel('a') === true);
+console.assert(isVowel('e') === true);
 
 // ---------------------
 // Write a function called `translate` that will translate a text into
@@ -207,43 +206,51 @@ console.assert(isVowel('e'), true);
 // "o" in between. For example, translate("this is fun") should return the
 // string "tothohisos isos fofunon".
 // write your code here:
+
+
 function translate(text){
-  for (var i = text; i = text.length; text++){
-  if (i = 'a'){
-    return (i)
+  var cons = '';
+  for (var i = 0; i < text.length; i++){
+    if (isVowel(text[i]) === false){
+    cons += (text[i] +'o'+text[i])
+    // console.log(cons);
+    }
+    else {
+      cons += text[i];
+    }
   }
-  if (i = 'e'){
-    return (i)
-  }
-  if (i = 'i'){
-    return (i)
-  }
-  if (i = 'o'){
-    return (i)
-  }
-  if (i = 'u'){
-    return (i)
-  }
-  else {
-    return (i+i+'o')
-  }
-}
-}
+  return cons;
+
+};
 // write your console.log/asserts here:
-console.log(translate('my lucky stars'));
+console.log(translate('cat dog'));
 
 // ---------------------
 // Write a function called `reverse` that computes the reversal of a string.
 // For example, reverse("jag testar") should return the string "ratset gaj".
 // write your code here:
+function reverse(string){
+  // var splitString = string.split('');
+  // var reverseArray = splitString.reverse();
+  // var joinArray = reverseArray.join('');
+  // return joinArray;
+  return string.split('').reverse().join('');
+}
 
 // write your console.log/asserts here:
-
-
+console.log(reverse('jag testar'));
+console.assert(reverse('string day')=== 'yad gnirts');
 // ---------------------
 // Write a function called `largest` that takes an array of numbers and returns
 // the largest number in the array.
 // write your code here:
+
+
+function largest (){
+  numbers.sort(function(a, b) {return a - b});
+  numbers.reverse();
+  return (numbers[0])
+  }
 
 // write your console.log/asserts here:
 console.log('the largest number in the `numbers` array is ', largest(numbers));
@@ -253,33 +260,84 @@ console.assert(largest(numbers), 101);
 // Write a function called `longest` that takes an array of strings and returns
 // the longest string in the array.
 // write your code here:
-
+function longest(strings){
+  strings.sort(function(a, b) {return b.length - a.length});
+  return(strings[0]);
+}
 // write your console.log/asserts here:
+console.log('the longest string in the `strings` array is ', longest(strings));
+console.assert(longest(strings), 'collection');
 
 
 // ---------------------
 // Write a function called `getEvens` that takes an array of numbers and returns
 // a new array with only the even numbers from the original array
 // write your code here:
+function getEvens(array){
+  return array.filter(function(even){return even % 2 === 0})
+}
+
+// var evenNums = [];
+//
+// function getEvens(numbers){
+//   var nums = 0;
+//   for (var i = 0; i < numbers.length; i++){
+//     if (numbers[i] % 2 === 0){
+//       evenNums.push(nums[i]);
+//       return(evenNums);
+//     }
+//   }
+// }
+
+// function getEvens(nums){
+//   var evens = [];
+//   var num = 0;
+//   for (var i = 0; i < nums.length; i++) {
+//     if (nums[i] % 2 === 0) {
+//       evens.push (num += nums[i]);
+//       return(evens);
+//       // console.log(num);
+//       // evens.push (num + nums[i]);
+//       // return(evens);
+//
+//     }
+//   }
+// }
+
+
 
 // write your console.log/asserts here:
-
-
+console.log(getEvens(numbers));
+// console.assert()
 // ---------------------
 // Write a function called `getOdds` that takes an array of numbers and returns
 // a new array with only the odd numbers from the original array
 // write your code here:
-
+function getOdds(array){
+  return array.filter(function(odd){return odd % 2 !== 0})
+}
 // write your console.log/asserts here:
-
+console.log(getOdds(numbers));
 
 // ---------------------
 // Write a function called `containsIs` that takes an array of strings and
 // returns a new array with only the strings which contain the substring `is`
 // write your code here:
+function containIs(array){
+  var sub = '';
+  var substring = [];
+  for(var i = 0; i < array.length; i++){
+  if (array[i] = 'is') {
+    array[i] = (sub += array[i]);
+  substring.push(sub += array[i]);
+  return(substring);
+      }
+    }
+  };
+
 
 // write your console.log/asserts here:
-
+console.log(containIs(strings));
 
 ///////////////////////////////////////////////////////////////////////////////
 //                                                      Adventurer Mode                                                              //
